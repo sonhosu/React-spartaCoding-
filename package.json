@@ -7,7 +7,11 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "classnames": "^2.3.1",
+<<<<<<< HEAD
     "node-sass": "^4.14.1",
+=======
+    "node-sass": "4.14.1",
+>>>>>>> c10a887f60ee79bdea3c006fa81a84e1023a6f24
     "open-color": "^1.9.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
