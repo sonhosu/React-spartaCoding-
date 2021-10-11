@@ -4,7 +4,8 @@ import logo from './logo.svg';
 // import [컴포넌트 명] from [컴포넌트가 있는 파일경로];
 import BucketList from './BucketList';
 import './style.css';
-import "./scss_ex.scss";
+// import "./scss_ex.scss";
+import styled from 'styled-components';
 
 // 클래스형 컴포넌트는 이렇게 생겼습니다!
 class App extends React.Component {
@@ -35,5 +36,37 @@ class App extends React.Component {
     );
   }
 }
+
+const Container = styled.div`
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #eee;
+  padding: 32px;
+  box-sizing: border-box;
+
+`;
+
+const Container2 = styled.div`
+  max-width: 350px;
+  min-height: 80vh;
+  background-color: #fff;
+  padding: 16px;
+  margin: 20px auto;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+`;
+
+const Title = styled.h1`
+  color: slateblue;
+  text-align: center;
+`;
+
+const Line = styled.hr`
+  margin: 16px 0px;
+  border: 1px dotted #ddd;
+`;
+
+
+
 
 export default App;
