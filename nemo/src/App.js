@@ -19,7 +19,7 @@ class App extends React.Component {
     this.setState({count:this.state.count -1});
     }else{
       alert('네모가 없어요 !')
-    }
+    }   
   }
 
 
