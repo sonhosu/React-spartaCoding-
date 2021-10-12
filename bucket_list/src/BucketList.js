@@ -28,6 +28,7 @@ const ListStyle = styled.div`
 `;
 
 const ItemStyle = styled.div`
+  width: 150px;
   padding: 16px;
   margin: 8px;
   background-color: aliceblue;

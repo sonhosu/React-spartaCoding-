@@ -48,12 +48,8 @@ class App extends React.Component {
         </Container>
 
         <Input>
-          <input type="text" ref={this.text}/> 
-          <button onClick={this.addBucketList}>추가하기</button>
-
-          <input type="text" ref={this.inputText}/>
-          <button>추가하기 2</button>
-          
+         <TextInput type="text" ref={this.text}></TextInput>
+          <button onClick={this.addBucketList}>추가하기</button>   
         </Input>
       </div>
         
@@ -62,17 +58,27 @@ class App extends React.Component {
 }
 
 const Input = styled.div`
-  max-width: 350px;
+  max-width: 300px;
   min-height: 10vh;
   background-color: #fff;
   padding: 16px;
   margin: 20px auto;
-  border-radius: 5px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
   border: 1px solid #ddd;
+  position: fixed ;
+  bottom: 0;
+  
+
+`;
+const TextInput = styled.input`
+
+
 `;
 
+
 const Container = styled.div`
-  width: 100vw;
   min-height: 100vh;
   background-color: #eee;
   padding: 32px;
