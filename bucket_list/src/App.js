@@ -18,6 +18,7 @@ class App extends React.Component {
     };
 
     this.text= React.createRef();
+    this.inputText= React.createRef();
   }
 
   addBucketList = ()=> {
@@ -49,6 +50,10 @@ class App extends React.Component {
         <Input>
           <input type="text" ref={this.text}/> 
           <button onClick={this.addBucketList}>추가하기</button>
+
+          <input type="text" ref={this.inputText}/>
+          <button>추가하기 2</button>
+          
         </Input>
       </div>
         

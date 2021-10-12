@@ -9,7 +9,23 @@ class App extends React.Component {
 
       count: 3,
     };
+    this.div = React.createRef();
   }
+
+  hoverEvent = (e) => {
+    console.log(e);
+    console.log(e.target);
+
+    e.target.style.backgroundColor= "red"
+  }
+  componentDidMount() {
+    this.div.current.addEventListener("mouseover", this.hoverEvent);
+  }
+
+  componentWillUnmount() {
+    this.div.current.removeEventListener("mouseover", this.hoverEvent);
+  }
+
   addNemo = () => {
     this.setState({ count: this.state.count + 1 });
 
@@ -31,8 +47,8 @@ class App extends React.Component {
 
     return (
 
-      <div className="App">
-        <Nemo/>
+      <div className="App" ref={this.div}>
+        <Nemo />
         {nemo_count.map((num, idx) => {
           return (
             <div
@@ -48,7 +64,7 @@ class App extends React.Component {
             </div>
           )
         })}
-        <button  onClick={this.addNemo}>하나 추가</button>
+        <button onClick={this.addNemo}>하나 추가</button>
         <button onClick={this.removeNemo}>하나 뺴기</button>
 
       </div>
