@@ -28,3 +28,10 @@
 - React.createRef() 사용
 1. ref선언 : this.text = React.createRef(); 
 2. element 에서 ref = {this.text} 로연결 
+
+### 8. 이벤트 리스너 사용방법
+1. ref 잡아주기 (돔에 접근해야해서)
+2. 이벤트가 발생했을때 어떤효과를 줄껀지 함수 만들기.
+3. componentDidMount에서 등록
+4. componentWillUnMount에서 해제
+
