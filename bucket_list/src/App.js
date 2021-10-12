@@ -20,6 +20,13 @@ class App extends React.Component {
     this.text= React.createRef();
   }
 
+  addBucketList = ()=> {
+    let list = this.state.list;
+    const new_item = this.text.current.value;
+
+    this.setState({list: [...list, new_item]});
+  }
+
   componentDidMount(){
     console.log(this.text);
   }
@@ -39,14 +46,25 @@ class App extends React.Component {
             <BucketList list={this.state.list} />
         </Container>
 
-        <div>
-          <input type="text" ref={this.text}/>
-        </div>
+        <Input>
+          <input type="text" ref={this.text}/> 
+          <button onClick={this.addBucketList}>추가하기</button>
+        </Input>
       </div>
         
     );
   }
 }
+
+const Input = styled.div`
+  max-width: 350px;
+  min-height: 10vh;
+  background-color: #fff;
+  padding: 16px;
+  margin: 20px auto;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+`;
 
 const Container = styled.div`
   width: 100vw;
