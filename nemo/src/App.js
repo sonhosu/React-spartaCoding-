@@ -12,19 +12,8 @@ class App extends React.Component {
     this.div = React.createRef();
   }
 
-  hoverEvent = (e) => {
-    console.log(e);
-    console.log(e.target);
+  
 
-    e.target.style.backgroundColor= "red"
-  }
-  componentDidMount() {
-    this.div.current.addEventListener("mouseover", this.hoverEvent);
-  }
-
-  componentWillUnmount() {
-    this.div.current.removeEventListener("mouseover", this.hoverEvent);
-  }
 
   addNemo = () => {
     this.setState({ count: this.state.count + 1 });
