@@ -73,6 +73,9 @@ class App extends React.Component {
           <input type="text" ref={this.text} />
           <button onClick={this.addBucketList}>추가하기</button>
         </Input>
+        <button onClick={()=>{
+          window.scrollTo({top:0, left:0, behavior:"smooth"});
+        }}>위로가기</button>
       </div>
     );
   }
@@ -86,6 +89,9 @@ const Input = styled.div`
   margin: 20px auto;
   border-radius: 5px;
   border: 1px solid #ddd;
+  position: fixed;
+  bottom: 37px;
+  left: 900px;
 `;
 
 const Container = styled.div`
